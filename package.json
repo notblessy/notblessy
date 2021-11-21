@@ -1,0 +1,38 @@
+{
+  "name": "notblessy",
+  "version": "1.0.0",
+  "description": "<!-- **notblessy/notblessy** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "backpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notblessy/notblessy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/notblessy/notblessy/issues"
+  },
+  "homepage": "https://github.com/notblessy/notblessy#readme",
+  "dependencies": {
+    "@sentry/node": "^6.15.0",
+    "backpack-core": "^0.8.4",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-jwt": "^6.1.0",
+    "google-auth-library": "^7.10.2",
+    "indicative": "^7.4.4",
+    "knex": "^0.21.21",
+    "mysql": "^2.18.1",
+    "nanoid": "^3.1.30",
+    "objection": "^2.2.18",
+    "objection-visibility": "^1.1.0",
+    "shortid": "^2.2.16"
+  },
+  "devDependencies": {}
+}
