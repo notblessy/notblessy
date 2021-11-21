@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "backpack build",
     "dev": "backpack"
   },
   "repository": {
@@ -20,6 +21,7 @@
   "dependencies": {
     "@sentry/node": "^6.15.0",
     "backpack-core": "^0.8.4",
+    "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
@@ -33,6 +35,5 @@
     "objection": "^2.2.18",
     "objection-visibility": "^1.1.0",
     "shortid": "^2.2.16"
-  },
-  "devDependencies": {}
+  }
 }

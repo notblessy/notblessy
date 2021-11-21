@@ -6,7 +6,7 @@ import bcrypt  from 'bcrypt';
 
 import { nanoid } from 'nanoid';
 import { validateAll } from '../utils/form';
-import { conn } from '../database';
+import { conn } from '../databases';
 
 export const register = async (req, res) => {
   const rules = {
@@ -41,9 +41,9 @@ export const register = async (req, res) => {
 
     const userID = nanoid();
     const data = await User.query(trx).insert({
-        email: googlePayload.email,
-        name: googlePayload.name,
-        role: 'CUSTOMER',
+        email: req.body.email,
+        name: req.body.name,
+        role: 'USER',
         id: userID,
         password: hashed,
     });
@@ -151,7 +151,7 @@ export const login = async (req, res) => {
 
 export const profile = async (req, res) => {
   try {
-    const user = await User.query().findById({
+    const user = await User.query().findOne({
       id: req.user.id,
     });
     return res.json({
@@ -173,7 +173,8 @@ export const edit = async (req, res) => {
     .findById(req.user.id)
     .patch({
         name: req.body.name,
-        email: req.body.email
+        email: req.body.email,
+        picture: req.body.picture,
     });
     return res.json({
       success: true,
